@@ -50,6 +50,17 @@ h1 a {
   color: darkred;
 }
 
+#author {
+  font-size: 18px;
+  color: #575757;
+  margin-left: 24px;
+}
+
+#body {
+  line-height: 28px;
+  font-size: 20px;
+}
+
 .list li {
   font-weight: bold;
   font-size: 20px;
@@ -72,8 +83,12 @@ h1 a {
   font-size: 14px;
 }
 
-.tags {
+.tags li {
   list-style: none;
+  color: darkred;
+}
+
+.tags li a {
   color: darkred;
 }
 

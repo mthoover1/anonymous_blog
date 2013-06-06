@@ -2,8 +2,8 @@
 
   <div class="post">
     <h2><%= @post.name %></h2>
-    <p><%= @post.author %></p>
-    <p><%= @post.body %></p>
+    <p id="author"><%= @post.author %></p>
+    <p id="body"><%= @post.body %></p>
 
     <ul class="tags">
       <% @post.tags.each do |tag| %>
