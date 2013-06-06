@@ -1,6 +1,6 @@
 Post.delete_all
 Tag.delete_all
-PostTags.delete_all
+PostTag.delete_all
 
 tags = []
 
@@ -18,4 +18,22 @@ tags << Tag.create!(name: "Off-Topic")
 end
 
 
+post_ids = []
+tag_ids = []
 
+posts = Post.all
+tags = Tag.all
+
+posts.each do |post|
+  post_ids << post.id
+end
+
+tags.each do |tag|
+  tag_ids << tag.id
+end
+
+
+10.times do
+  PostTag.create!(post_id: post_ids.sample,
+                   tag_id: tag_ids.sample    )
+end

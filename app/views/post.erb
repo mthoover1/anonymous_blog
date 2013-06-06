@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="post">
+    <h2><%= @post.name %></h2>
+    <p><%= @post.author %></p>
+    <p><%= @post.body %></p>
+
+    <ul class="tags">
+      <% @post.tags.each do |tag| %>
+      <li><a href="/tag/<%= tag.name %>">[<%= tag.name %>]</a></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <form action="/posts/<%=@post.id%>/edit" method="get">
+    <input type="submit" value="Edit Post" class="button">
+  </form>
+
+  <form action="/posts/<%=@post.id%>/delete" method="post">
+    <input type="submit" value="Delete Post" class="button">
+  </form>
+
+
+</div>

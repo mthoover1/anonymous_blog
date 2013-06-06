@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="list">
+    <h2>Create Post</h2>
+
+    <% if @errors %>
+      <div id="errors">
+      <ul>
+      <% @errors.each do |k, v| %>
+        <li><%= "#{k}: #{v}" %></li>
+      <% end %>
+      </ul>
+      </div>
+    <% end %>
+
+    <form action="/posts" method="post" id="newpost">
+      <input type="text" placeholder="Title" name="post[name]">
+      <input type="text" placeholder="Author" name="post[author]"><br>
+      <textarea rows="30" cols="50" placeholder="Post Content" name="post[body]"></textarea><br>
+      <input type="text" placeholder="Tags" name="post[tags]"><br>
+      <input type="submit" value="Create Post" class="button">
+    </form>
+  </div>
+</div>

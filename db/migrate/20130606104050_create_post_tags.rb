@@ -4,5 +4,7 @@ class CreatePostTags < ActiveRecord::Migration
       t.integer :post_id
       t.integer :tag_id
     end
+
+    add_index :post_tags, [:post_id, :tag_id], uniqueness: true
   end
 end

@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="list">
+    <h2>Edit Post</h2>
+
+    <% if @errors %>
+      <div id="errors">
+      <ul>
+      <% @errors.each do |k, v| %>
+        <li><%= "#{k}: #{v}" %></li>
+      <% end %>
+      </ul>
+      </div> 
+    <% end %>
+
+
+    <form action="/posts/<%= @post.id %>/update" method="post" id="newpost">
+      <input type="text" placeholder="Title" name="post[name]" value="<%=@post.name%>"><br>
+      <textarea rows="30" cols="50" name="post[body]"><%=@post.body%></textarea><br><br>
+      <input type="submit" value="Save Post" class="button">
+    </form>
+  </div>
+</div>

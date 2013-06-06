@@ -2,6 +2,7 @@
 
   <div class="list">
     <h2>Blog Posts</h2>
+    <h3>Tagged "<%= @tag.name %>"</h3>
     <ul>
       <% @posts.each do |post| %>
       <li><a href="/posts/<%= post.id %>"><%= post.name %></a>  <span><%= post.author %></span></li>
@@ -9,8 +10,5 @@
     </ul>
   </div>
 
-  <form action="/posts/new" method="get">
-    <input type="submit" value="New Post" class="button">
-  </form>
 
 </div>

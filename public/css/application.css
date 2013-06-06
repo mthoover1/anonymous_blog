@@ -2,13 +2,33 @@ body {
   background-color: darkred;
 }
 
-.container {
+#header {
   margin: 20px auto;
+  height: 114px;
   width: 800px;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 24px 20px 24px;
   border: 10px solid black;
   border-radius: 30px;
   background-color: white;
+}
+
+
+.container {
+  margin: 20px auto;
+  width: 800px;
+  padding: 20px 24px 44px 24px;
+  border: 10px solid black;
+  border-radius: 30px;
+  background-color: white;
+}
+
+#headertext {
+  float: left;
+  margin-top: 8px;
+}
+
+#headerlogo {
+  float: right;
 }
 
 th {
@@ -17,5 +37,81 @@ th {
 
 h1 {
   color: darkred;
-  font-size: 40px;
+  font-size: 48px;
+  font-family: "Big Caslon", sans-serif;
+}
+
+h1 a {
+  text-decoration: none;
+  color: darkred;
+}
+
+#errors {
+  color: darkred;
+}
+
+.list li {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  list-style: none;
+}
+
+.list a {
+  text-decoration: none;
+  color: black;
+}
+
+.list a:hover {
+  color: darkred;
+}
+
+.list span{
+  color: gray;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.tags {
+  list-style: none;
+  color: darkred;
+}
+
+.tags a:visited {
+  color: darkred;
+}
+
+.button {
+  color: white;
+  font-weight: bold;
+  background-color: darkred;
+  margin-top: 28px;
+}
+
+#newpost {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#newpost input {
+  width: 350px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#newpost textarea {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#newpost textarea:focus {
+  outline-color: darkred;
+}
+
+#newpost .button {
+  width: 120px;
+}
+
+#newpost input:focus {
+  outline-color: darkred;
 }
