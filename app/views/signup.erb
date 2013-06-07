@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="list">
+    <h2>Sign Up</h2>
+
+    <% if @errors %>
+      <div id="errors">
+      <ul>
+      <% @errors.each do |k, v| %>
+        <li><%= "#{k}: #{v}" %></li>
+      <% end %>
+      </ul>
+      </div>
+    <% end %>
+
+    <form action="/users/signup" method="post" id="newpost">
+      <input type="text" placeholder="Name" name="user[name]" required="true">
+      <input type="text" placeholder="Email" name="user[email]" required="true">
+      <input type="text" placeholder="Password" name="user[password]" required="true"><br>
+      <input type="submit" value="Sign Up" class="button">
+    </form>
+  </div>
+</div>

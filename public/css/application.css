@@ -25,10 +25,22 @@ body {
 #headertext {
   float: left;
   margin-top: 8px;
+  margin-bottom: 0px;
 }
 
 #headerlogo {
   float: right;
+}
+
+#nav {
+  clear: left;
+  width: 190px;
+  text-align: center;
+}
+
+#nav a {
+  color: darkred;
+  font-weight: bold;
 }
 
 th {
@@ -39,6 +51,7 @@ h1 {
   color: darkred;
   font-size: 48px;
   font-family: "Big Caslon", sans-serif;
+  margin-bottom: 14px;
 }
 
 h1 a {

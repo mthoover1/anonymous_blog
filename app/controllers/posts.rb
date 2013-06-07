@@ -32,6 +32,8 @@ end
 
 post '/posts' do
   @post = Post.new(params[:post])
+  puts session[:user]
+  @post.user_id = User.find(session[:user]).id
   if @post.save
     redirect '/'
   else

@@ -11,7 +11,6 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
@@ -25,6 +24,14 @@
     <div id="headerlogo">
       <img src="/images/bwlogo.gif">
     </div>
+    <div id="nav">
+      <% if session[:user] %>
+        <a href="/users/logout">Logout</a>
+      <% else %>
+        <a href="/users/signup">Sign Up</a> | <a href="/users/login">Login</a>
+      <% end %>
+    </div>
+
   </div>
   <%= yield %>
 </body>

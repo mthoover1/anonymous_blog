@@ -5,7 +5,7 @@
     <h3>Tagged "<%= @tag.name %>"</h3>
     <ul>
       <% @posts.each do |post| %>
-      <li><a href="/posts/<%= post.id %>"><%= post.name %></a>  <span><%= post.author %></span></li>
+      <li><a href="/posts/<%= post.id %>"><%= post.name %></a>  <span><%= User.find(post.user_id).name %></span></li>
       <% end %>
     </ul>
   </div>

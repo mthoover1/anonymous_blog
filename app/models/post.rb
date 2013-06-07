@@ -1,8 +1,9 @@
 class Post < ActiveRecord::Base
   has_many :post_tags
   has_many :tags, :through => :post_tags
+  belongs_to :user
 
-  validates :name, :author, :body, :presence => :true
+  validates :name, :user_id, :body, :presence => :true
 
   def tags=(tag_names)
     puts "In the tags method"

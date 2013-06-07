@@ -4,13 +4,15 @@
     <h2>Blog Posts</h2>
     <ul>
       <% @posts.each do |post| %>
-      <li><a href="/posts/<%= post.id %>"><%= post.name %></a>  <span><%= post.author %></span></li>
+      <li><a href="/posts/<%= post.id %>"><%= post.name %></a>  <span><%= User.find(post.user_id).name %></span></li>
       <% end %>
     </ul>
   </div>
 
+  <% if session[:user] %>
   <form action="/posts/new" method="get">
     <input type="submit" value="New Post" class="button">
   </form>
+  <% end %>
 
 </div>

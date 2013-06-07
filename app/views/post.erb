@@ -2,7 +2,7 @@
 
   <div class="post">
     <h2><%= @post.name %></h2>
-    <p id="author"><%= @post.author %></p>
+    <p id="author"><%= User.find(@post.user_id).name %></p>
     <p id="body"><%= @post.body %></p>
 
     <ul class="tags">
@@ -12,13 +12,14 @@
     </ul>
   </div>
 
-  <form action="/posts/<%=@post.id%>/edit" method="get">
-    <input type="submit" value="Edit Post" class="button">
-  </form>
+  <% if User.find(@post.user_id).id == session[:user] %>
+    <form action="/posts/<%=@post.id%>/edit" method="get">
+      <input type="submit" value="Edit Post" class="button">
+    </form>
 
-  <form action="/posts/<%=@post.id%>/delete" method="post">
-    <input type="submit" value="Delete Post" class="button">
-  </form>
-
+    <form action="/posts/<%=@post.id%>/delete" method="post">
+      <input type="submit" value="Delete Post" class="button">
+    </form>
+  <% end %>
 
 </div>
