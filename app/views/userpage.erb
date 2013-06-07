@@ -1,10 +1,10 @@
 <div class="container">
 
   <div class="list">
-    <h2>Blog Posts</h2>
+    <h2><%= @user.name %></h2>
     <ul>
       <% @posts.each do |post| %>
-      <li><a href="/posts/<%= post.id %>"><%= post.name %></a>  <span><a href="/users/<%=User.find(post.user_id).id%>/posts"><%= User.find(post.user_id).name %></a></span><% unless post.image.nil? %> <img class="icon" src="images/photo.png"><% end %></li>
+      <li><a href="/posts/<%= post.id %>"><%= post.name %></a>  <% unless post.image.nil? %> <img class="icon" src="/images/photo.png"><% end %></li>
       <% end %>
     </ul>
   </div>

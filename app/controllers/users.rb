@@ -32,3 +32,10 @@ get '/users/logout' do
   session.clear
   redirect '/'
 end
+
+get '/users/:id/posts' do
+  @user = User.find(params[:id])
+  @posts = Post.where(user_id: params[:id])
+
+  erb :userpage
+end

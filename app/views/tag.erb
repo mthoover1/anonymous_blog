@@ -5,7 +5,7 @@
     <h3>Tagged "<%= @tag.name %>"</h3>
     <ul>
       <% @posts.each do |post| %>
-      <li><a href="/posts/<%= post.id %>"><%= post.name %></a>  <span><%= User.find(post.user_id).name %></span></li>
+      <li><a href="/posts/<%= post.id %>"><%= post.name %></a>  <span><a href="/users/<%=User.find(post.user_id).id%>/posts"><%= User.find(post.user_id).name %></a></span><% unless post.image.nil? %> <img class="icon" src="/images/photo.png"><% end %></li>
       <% end %>
     </ul>
   </div>

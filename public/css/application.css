@@ -34,7 +34,7 @@ body {
 
 #nav {
   clear: left;
-  width: 190px;
+  width: 216px;
   text-align: center;
 }
 
@@ -50,13 +50,19 @@ th {
 h1 {
   color: darkred;
   font-size: 48px;
-  font-family: "Big Caslon", sans-serif;
-  margin-bottom: 14px;
+  font-family: 'Bevan', sans-serif;
+  margin-bottom: 8px;
+  margin-top: 20px;
 }
 
 h1 a {
   text-decoration: none;
   color: darkred;
+}
+
+h2 {
+  font-family: 'Bevan', sans-serif;
+  font-weight: normal;
 }
 
 #errors {
@@ -78,6 +84,11 @@ h1 a {
   max-width: 500px;
 }
 
+.icon {
+  width: 24px;
+  margin-bottom: -6px;
+}
+
 .list li {
   font-weight: bold;
   font-size: 20px;
@@ -95,6 +106,12 @@ h1 a {
 }
 
 .list span{
+  color: gray;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.list span a{
   color: gray;
   font-weight: normal;
   font-size: 14px;
