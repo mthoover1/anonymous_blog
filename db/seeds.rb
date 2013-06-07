@@ -9,11 +9,21 @@ tags << Tag.create!(name: "Analysis")
 tags << Tag.create!(name: "Scouting Report")
 tags << Tag.create!(name: "Off-Topic")
 
+users = []
+count = 1
 
-10.times do
+5.times do 
+  users << User.create!(name: Faker::Name.name,
+                         email: count,
+                         password: "123" )
+  count += 1
+end
+
+
+20.times do
   Post.create!(name: Faker::Lorem.sentence(word_count = 3, supplemental = false),
                body: Faker::Lorem.paragraphs(paragraph_count = 3, supplemental = false),
-               author: Faker::Name.name
+               user_id: users.sample.id
                 )
 end
 

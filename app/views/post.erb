@@ -2,7 +2,13 @@
 
   <div class="post">
     <h2><%= @post.name %></h2>
+
     <p id="author"><%= User.find(@post.user_id).name %></p>
+
+    <% if @post.image %>
+    <img class="postimage" src="<%= @post.image %>">
+    <% end %>
+
     <p id="body"><%= @post.body %></p>
 
     <ul class="tags">

@@ -74,6 +74,10 @@ h1 a {
   font-size: 20px;
 }
 
+.postimage {
+  max-width: 500px;
+}
+
 .list li {
   font-weight: bold;
   font-size: 20px;

@@ -17,6 +17,7 @@
     <form action="/posts/<%= @post.id %>/update" method="post" id="newpost">
       <input type="text" placeholder="Title" name="post[name]" value="<%=@post.name%>"><br>
       <textarea rows="30" cols="50" name="post[body]"><%=@post.body%></textarea><br><br>
+      <input type="text" placeholder="Image URL" name="post[image]" value="<%=@post.image%>"><br>
       <input type="submit" value="Save Post" class="button">
     </form>
   </div>
